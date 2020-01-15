@@ -73,7 +73,7 @@ module Puppet
           the "facter-ng" gem). This is not necessary if Facter 3.x or later is installed.
           This setting is still experimental and has been only included on Windows builds',
         :hook    => proc do |value|
-                      if value && Puppet::Util::Platform.windows?
+                      if value
                         begin
                           require 'facter-ng'
                         rescue LoadError
